@@ -75,8 +75,9 @@ end
 def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
-  __
-  __
+  this_movie = Movie.find_by(title: "Wat?")
+  this_movie.update(title: "Wat, huh?")
+  this_movie.save
 end
 
 def can_update_multiple_items_at_once
